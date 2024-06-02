@@ -11,4 +11,4 @@ Manage your emails using 'Email Assitant' , a website aimed at streamlining elec
  HuggingFace pipeline for summarization was used to implement text summarization.
 
  ## How to use
- Run manage.py file and using the local host link provided by Django, find the website through {local_host}/home
+ Run ' py manage.py runserver' command and, using the local host link provided by Django, find the website through '{local_host}/home'
