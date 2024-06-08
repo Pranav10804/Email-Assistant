@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Classifier</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Average&display=swap">
+    <style>
+        body {
+            font-family: 'Average', serif;
+            background-color: #172a24;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #0e0e0e;
+        }
+        header {
+            background-color: #4CAF50;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+        main {
+            text-align: center;
+            margin-top: 80px; /* Adjust to account for fixed header */
+            width: 100%;
+        }
+        h1 {
+            color:#f0ecec;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 20px auto;
+            font-size: 18px;
+        }
+        footer {
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Email Assistant
+</header>
+
+<main>
+    <h1>Classify Your Email</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Classify">
+    </form>
+
+    {% if classification %}
+    <div class="result">
+        <p><strong>Classification:</strong> {{ classification }}</p>
+    </div>
+    {% endif %}
+</main>
+
+<footer>
+    &copy; 2024 Email Assistant. All rights reserved.
+</footer>
+
+</body>
+</html>

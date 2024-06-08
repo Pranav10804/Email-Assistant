@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Assistant</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Average&display=swap">
+    <style>
+        body {
+            font-family: 'Antonio';
+            background-color: #172a24;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #faf7f7;
+        }
+        header {
+            background-color: #4CAF50;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            color: #172a24;
+            font-size: 24px;
+        }
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Email Assistant
+</header>
+
+<main>
+    <h1>Welcome to Email Assistant</h1>
+    <p>Streamline your email management with our smart tools. Whether you need to classify your emails or summarize them quickly, we are here to help!</p>
+    
+    <div class="buttons">
+        <a href='/submit'><button class="button" onclick="window.location.href='#'">Classify Your Emails</button></a>
+        <a href='/submit1'><button class="button" onclick="window.location.href='#'">Summarize Emails</button></a>
+    </div>
+</main>
+
+<footer>
+    &copy; 2024 Email Assistant. All rights reserved.
+</footer>
+
+</body>
+</html>
